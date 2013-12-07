@@ -18,6 +18,7 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
+<<<<<<< HEAD
   background: #78aa35
 }
 
@@ -35,6 +36,8 @@ body {
   padding-bottom: 19px;
   background: #78aa35
 }
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
