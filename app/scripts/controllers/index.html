@@ -16,27 +16,14 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
-<body >
+<body>
 <div class="well" ng-app="chat" ng-controller="Chat">
   <form class="form-inline">
     Your name: <input type="text" ng-model="username">
-    <!-- Subject: <input type="text" ng-model="subject"> -->
-    Search: <input type="text" ng-model='searchText'>
-
-    
   </form>
-  
-  <table id="searchObjResults">
-    <tr ng-repeat="message in messages | filter:{subject:searchText}">
-      <td>{{message.subject}}</td>
-      <td>{{message.from}}:</td>
-      <td>{{message.content}}</td>
-    </tr>
-  </table>
-<!--   <div ng-repeat="message in messages | filter:search">
-    <em>{{message.subject}}</em>
+  <div ng-cloak ng-repeat="message in messages">
     <em>{{message.from}}: </em>{{message.content}}
-  </div> --><br/>
+  </div><br/>
   <form class="form-inline" ng-submit="addMessage()">
     <input type="text" ng-model="message" placeholder="Message...">
     <button class="btn" type="submit">
@@ -44,11 +31,9 @@
     </button>
   </form>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
 <script src="//cdn.firebase.com/v0/firebase.js"></script>
 <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
- <!--  // <script type="text/javascript" src="./scripts/app.js"></script> -->
-
 <script type="text/javascript">
   angular.module('chat', ['firebase']).controller('Chat', ['$scope', 'angularFire',
     function($scope, angularFire) {
@@ -57,15 +42,10 @@
       $scope.username = 'Guest' + Math.floor(Math.random()*101);
       $scope.addMessage = function() {
         $scope.messages[ref.push().name()] = {
-          from: $scope.username, content: $scope.message, subject: $scope.subject
+          from: $scope.username, content: $scope.message
         };
         $scope.message = "";
-        $scope.subjects = ['Programming', 'Farming', 'Sewing', 'IT', 'Accounting', 'Finance', 'Life Advice', 'Math']
       }}]);
 </script>
-  <script type="text/javascript" src="./scripts/controllers/main.js"></script>
-  <script type="text/javascript" src="./scripts/services/chatService.js"></script>
-  <script type="text/javascript" src="./scripts/directives/chatDirective.js"></script>
-  <!-- // <script type="text/javascript" src="./scripts/filters/tagFilter.js"></script> -->
 </body>
 </html>

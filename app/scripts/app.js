@@ -1,7 +1,7 @@
 'use strict';
-
-angular.module('powerChatApp', [])
-  .config(['$routeProvider', function ($routeProvider) {
+//var app = angular.module("myapp", ["firebase"]);
+angular.module('chat', ["firebase", "chat.Controllers"])
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -10,4 +10,4 @@ angular.module('powerChatApp', [])
       .otherwise({
         redirectTo: '/'
       });
-  }]);
+  });
