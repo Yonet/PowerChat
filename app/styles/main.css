@@ -12,6 +12,7 @@ body {
 
 .ng-binding {
   padding: 5px;
+  text-align: left;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -42,7 +43,7 @@ body {
   padding-bottom: 19px;
   background: #78aa35
 }
-}
+
 
 /* Custom page footer */
 .footer {
@@ -60,7 +61,10 @@ body {
 .container-narrow > hr {
   margin: 30px 0;
 }
-
+.tags {
+    font-size: 21px;
+    padding: 14px 24px;
+}
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
@@ -69,6 +73,7 @@ body {
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
+
 }
 
 /* Supporting marketing content */
