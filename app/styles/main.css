@@ -6,6 +6,13 @@ body {
   width: 559px;
   height: 1000px
 }
+.subject {
+  color: #78aa35;
+}
+
+.ng-binding {
+  padding: 5px;
+}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,

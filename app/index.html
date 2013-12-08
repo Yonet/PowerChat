@@ -34,7 +34,7 @@
   
   <table id="searchObjResults">
     <tr ng-repeat="message in messages | filter:{subject:searchText}">
-      <td>{{message.subject}}</td>
+      <td class="subject">{{message.subject}}</td>
       <td>{{message.from}}:</td>
       <td>{{message.content}}</td>
     </tr>
